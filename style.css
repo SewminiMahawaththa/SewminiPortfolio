@@ -499,14 +499,14 @@ a.btn:nth-child(2)::before{
     box-shadow: var(--neon-box-shadow);
 }
 
-.skill-bar .bar .html{
+.skill-bar .bar .mern{
     width: 72%;
-    animation: html 2s;
+    animation: mern 2s;
 }
 
-.skill-bar .bar .figma{
+.skill-bar .bar .html{
     width: 90%;
-    animation: figma 3s;
+    animation: html 3s;
 }
 
 .skill-bar .bar .javascript{
@@ -514,9 +514,19 @@ a.btn:nth-child(2)::before{
     animation: javascript 4s;
 }
 
-.skill-bar .bar .css{
+.skill-bar .bar .kotlin{
     width: 62%;
-    animation: css 5s;
+    animation: kotlin 5s;
+}
+
+.skill-bar .bar .java{
+    width: 70%;
+    animation: java 6s;
+}
+
+.skill-bar .bar .webrtc{
+    width: 50%;
+    animation: webrtc 7s;
 }
 
 /*skills right*/
@@ -557,16 +567,18 @@ a.btn:nth-child(2)::before{
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #fff;
 }
 
 .circle .points{
-    width: 5px;
+    width: 2px;
     height: 10px;
     background-color: var(--bg-color);
     position: absolute;
     border-radius: 3px;
-    transform: rotate(calc(var(--i)*120deg)) translateY(-45px);
+    transform: rotate(calc(var(--i)*var(--rot))) translateY(-45px);
+}
+
+.points.marked{
     animation: glow 0.04s linear forwards;
     animation-delay: calc(var(--i)*0.05s);
 }
@@ -593,7 +605,7 @@ a.btn:nth-child(2)::before{
     }
 }
 
-@keyframes html{
+@keyframes mern{
     0%{
         width: 0%;
     }
@@ -602,7 +614,7 @@ a.btn:nth-child(2)::before{
     }
 }
 
-@keyframes figma{
+@keyframes html{
     0%{
         width: 0%;
     }
@@ -620,7 +632,7 @@ a.btn:nth-child(2)::before{
     }
 }
 
-@keyframes css{
+@keyframes kotlin{
     0%{
         width: 0%;
     }
@@ -628,6 +640,28 @@ a.btn:nth-child(2)::before{
         width: 62%;
     }
 }
+
+@keyframes java{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+
+@keyframes webrtc{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+
+
 
 @keyframes glow{
     0%{
